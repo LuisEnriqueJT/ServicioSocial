@@ -15,7 +15,20 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	
 	<div class="container">
+		
+	</div>
+
+	<div class="container-fluid">
+		<nav class="navbar fixed-top navbar-light bg-dark">
+ 			<a class="navbar-brand" href="mostrar.php">Ver</a>
+ 			<a class="navbar-brand" href="index.php">Editar</a>
+		</nav>	
+	</div>
+	<br>
+
+	<div class="container mt-5">
 		<div class="row justify-content-center">
 			
 			<div class="col-12 col-md-6 ">

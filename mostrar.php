@@ -12,18 +12,26 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div class="container">
-		<div class="row justify-content-center">
+
+	<div class="container-fluid">
+		<nav class="navbar fixed-top navbar-light bg-dark">
+ 			<a class="navbar-brand" href="mostrar.php">Ver</a>
+ 			<a class="navbar-brand" href="index.php">Editar</a>
+		</nav>	
+	</div>
+	<br>
+	<div class="container-fluid mt-5">
+		<div class="row">
 			
-			<div class="col-12 col-md-6">
 				
+			<div class="col-12 col-md-8">
 				<?php foreach($publicacion as $listado):?>
 			
-					<div>
+					<div class="">
 						<h4><?php echo $listado['nombre']?></h4>
-						<p class="justify"><?php echo $listado['parrafo1']?></p>
-						<p><?php echo $listado['parrafo2']?></p>
-						<p><?php echo $listado['parrafo3']?></p>
+						<p class=""><?php echo $listado['parrafo1']?></p>
+						<p class="float-right"><?php echo $listado['parrafo2']?></p>
+						<p class=""><?php echo $listado['parrafo3']?></p>
 						
 					</div>
 			
