@@ -30,7 +30,7 @@
 					<div class="">
 						<h4><?php echo $listado['nombre']?></h4>
 						<p class=""><?php echo $listado['parrafo1']?></p>
-						<p class="float-right"><?php echo $listado['parrafo2']?></p>
+						<p class=""><?php echo $listado['parrafo2']?></p>
 						<p class=""><?php echo $listado['parrafo3']?></p>
 						
 					</div>
@@ -42,5 +42,9 @@
 		</div>
 		
 	</div>
+
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
