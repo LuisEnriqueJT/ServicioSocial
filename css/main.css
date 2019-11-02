@@ -1,9 +1,23 @@
 body{
-	background-color: #136ad5;
+	background-color: #EBCA8E;
 }
 
-.recuperarTextos{
-	border: 1px solid transparent;
-	background-color: transparent;
+.mostrarTexto{
+	text-align: justify;
+}
 
+p{
+	font-size: 130%;
+}
+
+h2{
+	
+}
+
+elNavbar{
+	text-align: center;
+}
+
+a{
+	color: white;
 }

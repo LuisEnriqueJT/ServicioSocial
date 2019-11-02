@@ -14,26 +14,23 @@
 <body>
 
 	<div class="container-fluid">
-		<nav class="navbar fixed-top navbar-light bg-dark">
+		<nav class="navbar fixed-top bg-dark elNavbar">
  			<a class="navbar-brand" href="mostrar.php">Ver</a>
  			<a class="navbar-brand" href="index.php">Editar</a>
 		</nav>	
 	</div>
 	<br>
-	<div class="container-fluid mt-5">
+	<div class="container mt-5">
 		<div class="row">
 			
 				
-			<div class="col-12 col-md-8">
+			<div class="col-12">
 				<?php foreach($publicacion as $listado):?>
 			
-					<div class="">
-						<h4><?php echo $listado['nombre']?></h4>
-						<p class=""><?php echo $listado['parrafo1']?></p>
-						<p class=""><?php echo $listado['parrafo2']?></p>
-						<p class=""><?php echo $listado['parrafo3']?></p>
-						
-					</div>
+						<strong><h4><?php echo $listado['nombre']?></h4></strong>
+						<p class="mostrarTexto"><?php echo $listado['parrafo1']?></p>
+						<p class="mostrarTexto"><?php echo $listado['parrafo2']?></p>
+						<p class="mostrarTexto"><?php echo $listado['parrafo3']?></p>
 			
 				<?php endforeach;?>
 			
