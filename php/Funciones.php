@@ -27,6 +27,16 @@
 			$query->execute($data);
 		}
 
+		public function getTexto($nombre){
+			global $pdo;
+
+			$query = $pdo->prepare("SELECT * FROM proyecto WHERE nombre = :nombre");
+
+			$query->execute(['nombre'=>$nombre]);
+
+			return $query->fetch();
+		}
+
 	}
 
 ?>

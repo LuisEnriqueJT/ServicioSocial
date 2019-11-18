@@ -1,9 +1,16 @@
 <?php
 	require 'php/Funciones.php';
 	$obj = new Funciones();
+	//$publicacion = $obj->getTexto($_POST['nombre']);
 
-	if(isset($_POST['nombre'],$_POST['parrafo1'],$_POST['parrafo2'],$_POST['parrafo3'])){
-		$editar = $obj->actualizarPublicacion($_POST['nombre'],$_POST['parrafo1'],$_POST['parrafo2'],$_POST['parrafo3']); 
+	if(isset($_POST['actualizar'])){
+		if(isset($_POST['nombre'],$_POST['parrafo1'],$_POST['parrafo2'],$_POST['parrafo3'])){
+			$editar = $obj->actualizarPublicacion($_POST['nombre'],$_POST['parrafo1'],$_POST['parrafo2'],$_POST['parrafo3']); 
+		}
+	}else if(isset($_POST['recuperar'])){
+		if(isset($_POST['nombre'])){
+			$publicacion = $obj->getTexto($_POST['nombre']);
+		}
 	}
 ?>
 <!DOCTYPE html>
@@ -47,7 +54,11 @@
 				
 					<br>
 					<br>
-					<textarea name="parrafo1" cols="10" rows="5" class="form-control"></textarea>
+					<textarea name="parrafo1" cols="10" rows="5" class="form-control">
+						<?php
+						echo $publicacion['parrafo1'];
+						?>
+					</textarea>
 
 			</div>
 		</div>
@@ -56,21 +67,30 @@
 			<div class="col col-lg-6">
 				
 					<br>
-					<textarea name="parrafo2" cols="10" rows="5" class="form-control"></textarea>
+					<textarea name="parrafo2" cols="10" rows="5" class="form-control">
+						<?php
+						echo $publicacion['parrafo2'];
+						?>
+					</textarea>
 			</div>
 			
 		</div>
 		<div class="row justify-content-center">
 			<div class="col col-lg-6">
 				<br>
-				<textarea name="parrafo3" cols="10" rows="5" class="form-control"></textarea>
+				<textarea name="parrafo3" cols="10" rows="5" class="form-control">
+					<?php
+					echo $publicacion['parrafo3'];
+					?>
+				</textarea>
 				<br>
 			</div>	
 			
 		</div>
 		<div class="row justify-content-center">
 			<div class="col col-lg-6">
-					<input type="submit" value="Enviar" class="btn btn-warning">
+					<input type="submit" name="actualizar" value="Enviar" class="btn btn-warning">
+					<input type="submit" name="recuperar" value="Recuperar" class="btn btn-info">
 				</form>
 				
 			</div>
