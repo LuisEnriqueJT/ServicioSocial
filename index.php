@@ -1,6 +1,7 @@
 <?php
 	require 'php/Funciones.php';
 	$obj = new Funciones();
+	global $publicacion;
 	//$publicacion = $obj->getTexto($_POST['nombre']);
 
 	if(isset($_POST['actualizar'])){
@@ -9,7 +10,7 @@
 		}
 	}else if(isset($_POST['recuperar'])){
 		if(isset($_POST['nombre'])){
-			$publicacion = $obj->getTexto($_POST['nombre']);
+			$publicacion = $obj->recuperaTexto($_POST['nombre']);
 		}
 	}
 ?>
@@ -56,7 +57,7 @@
 					<br>
 					<textarea name="parrafo1" cols="10" rows="5" class="form-control">
 						<?php
-						echo $publicacion['parrafo1'];
+							echo $publicacion['parrafo1'];
 						?>
 					</textarea>
 

@@ -27,7 +27,7 @@
 			$query->execute($data);
 		}
 
-		public function getTexto($nombre){
+		public function recuperaTexto($nombre){
 			global $pdo;
 
 			$query = $pdo->prepare("SELECT * FROM proyecto WHERE nombre = :nombre");
