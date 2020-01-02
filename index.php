@@ -22,6 +22,8 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	
 </head>
 <body>
 	
@@ -55,7 +57,7 @@
 				
 					<br>
 					<br>
-					<textarea name="parrafo1" cols="10" rows="5" class="form-control">
+					<textarea id="parrafo1" name="parrafo1" cols="10" class="form-control">
 						<?php
 							echo $publicacion['parrafo1'];
 						?>
@@ -68,7 +70,7 @@
 			<div class="col col-lg-6">
 				
 					<br>
-					<textarea name="parrafo2" cols="10" rows="5" class="form-control">
+					<textarea id="parrafo2" name="parrafo2" cols="10" class="form-control">
 						<?php
 						echo $publicacion['parrafo2'];
 						?>
@@ -79,7 +81,7 @@
 		<div class="row justify-content-center">
 			<div class="col col-lg-6">
 				<br>
-				<textarea name="parrafo3" cols="10" rows="5" class="form-control">
+				<textarea id="parrafo3" name="parrafo3" cols="10" class="form-control">
 					<?php
 					echo $publicacion['parrafo3'];
 					?>
